@@ -1,0 +1,7 @@
+tyypescript commands
+
+npx tsc --version  verzio lekeres
+npx tsc app.js - buildeles
+
+
+--outDir='./dist' 
