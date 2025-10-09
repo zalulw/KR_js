@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const BACKEND_URL = "https://365commercial-portal.sootsoft.hu/banners/szeged";
+export const BACKEND_URL = "http://localhost:8001/";
 
 const apiClient = axios.create({
     baseURL: BACKEND_URL,
