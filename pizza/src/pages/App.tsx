@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import apiClient, { BACKEND_URL } from "./api/apiClient";
-import type { Pizza } from "./types/pizzaType.ts";
-import "./App.css";
+import apiClient, { BACKEND_URL } from "../api/apiClient.ts";
+import type { Pizza } from "../types/pizzaType.ts";
+import "../styles/App.css";
 
 function App() {
   const [pizzas, setPizzas] = useState<Array<Pizza>>([]);
