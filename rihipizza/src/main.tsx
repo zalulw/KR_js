@@ -1,17 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import AllPizza from "./pages/AllPizza";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import OnePizza from "./pages/OnePizza";
 import NewPizza from "./pages/NewPizza";
 import EditPizza from "./pages/EditPizza";
 import NotFoundPage from "./pages/errors/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import TopNavbar from "./components/TopNavbar";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <Router>
+      <TopNavbar />
       <Routes>
         <Route path="/" element={<AllPizza />} />
         <Route path="/pizza/:id" element={<OnePizza />} />
@@ -19,7 +21,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/new-pizza" element={<NewPizza />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
     <ToastContainer theme="colored" />
   </StrictMode>
 );
