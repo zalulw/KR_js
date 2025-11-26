@@ -17,6 +17,14 @@ const AllPizza = () => {
       .catch(() => toast.error("A pizzák betöltése sikertelen volt"));
   }, []);
 
+  const [kosar, setKosar] = useState<Array<number>>(
+    JSON.parse(localStorage.getItem("cart") ?? "[]") //ures "string tomb" igazi tombbe valtozik ha nincsenek itemek
+  );
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(kosar));
+  }, [kosar]);
+
   const generateCard = (p: Pizza) => {
     return (
       <Col>
@@ -30,6 +38,15 @@ const AllPizza = () => {
               variant="success"
             >
               Megtekintés
+            </Button>
+            <Button
+              onClick={() => {
+                setKosar([...kosar, Number(p.id)]);
+                toast.success("Sikeresen kosárba tetted a terméket!");
+              }}
+              variant="success"
+            >
+              Kosárba
             </Button>
           </Card.Body>
         </Card>

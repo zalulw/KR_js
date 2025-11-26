@@ -9,6 +9,7 @@ import EditPizza from "./pages/EditPizza";
 import NotFoundPage from "./pages/errors/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TopNavbar from "./components/TopNavbar";
+import Cart from "./pages/Cart";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/edit-pizza/:id" element={<EditPizza />} />
         <Route path="/new-pizza" element={<NewPizza />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
     <ToastContainer theme="colored" />
