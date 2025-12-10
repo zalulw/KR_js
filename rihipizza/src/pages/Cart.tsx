@@ -4,6 +4,8 @@ import type { Pizza } from "../types/Pizza";
 import { toast } from "react-toastify";
 import { Button, Table } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
+import { IoNuclear } from "react-icons/io5";
+
 
 const Cart = () => {
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
@@ -18,6 +20,7 @@ const Cart = () => {
   const [kosar, setKosar] = useState<Array<number>>(
     JSON.parse(localStorage.getItem("cart") ?? "[]") //ures "string tomb" igazi tombbe valtozik ha nincsenek itemek
   );
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(kosar));
   }, [kosar]);
@@ -53,6 +56,9 @@ const Cart = () => {
           );
         })}
       </tbody>
+      <Button onClick={() => setKosar([])} variant="warning">
+        <IoNuclear />
+      </Button>
     </Table>
   );
 };
