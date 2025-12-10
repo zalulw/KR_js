@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/errors/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TopNavbar from "./components/TopNavbar";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/new-pizza" element={<NewPizza />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
     <ToastContainer theme="colored" />

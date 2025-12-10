@@ -4,14 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import { GiFullPizza } from "react-icons/gi";
+import { FaPizzaSlice } from "react-icons/fa";
 
 function TopNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <GiFullPizza />
-          RihiPizza
+          <FaPizzaSlice />
+          PizzaPizza
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -32,6 +33,9 @@ function TopNavbar() {
             </NavDropdown>
             <Nav.Link as={Link} to="/cart">
               Kosár
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login">
+              Bejelentkezés
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
