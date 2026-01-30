@@ -3,7 +3,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-import { GiFullPizza } from "react-icons/gi";
 import { FaPizzaSlice } from "react-icons/fa";
 
 function TopNavbar() {

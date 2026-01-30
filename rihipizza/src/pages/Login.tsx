@@ -12,7 +12,7 @@ const Login = () => {
   const submit = () => {
     apiClient
       .post("/login", user)
-      .then((response) => {
+      .then(() => {
         localStorage.setItem("credentials", JSON.stringify(user));
         toast.success("Sikeres bejelentkezés");
         navigate("/");

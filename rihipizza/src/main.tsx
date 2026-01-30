@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import TopNavbar from "./components/TopNavbar";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import Orders from "./pages/Orders";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </Router>
     <ToastContainer theme="colored" />
