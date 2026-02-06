@@ -10,6 +10,7 @@ const AllPizza = () => {
 
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
 
+  const fasz = fjslkajflksa
   useEffect(() => {
     apiClient
       .get("/pizzak")
